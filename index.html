@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HRDW — Harrison R. Whelan · Director / Editor / Generative AI</title>
+  <meta name="description" content="Harrison R. Whelan (HRDW) — Generative AI Specialist, Editor, Director & Producer. Commercials, music videos, documentary, AI-generated content and more." />
+  <meta name="author" content="Harrison R. Whelan" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="HRDW — Harrison R. Whelan" />
+  <meta property="og:description" content="Generative AI Specialist · Editor · Director · Producer" />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="assets/headshot-cutout.png" />
+
+  <link rel="icon" type="image/png" href="assets/hrdw-logo-black.png" />
+
+  <!-- Fonts: Anton (heavy condensed display, matches HRDW wordmark) + Inter (UI/body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@300;400;500;600;700&family=Archivo:wght@400;600;800&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body data-scroll-locked="true">
+
+  <!-- ============ NOISE / GRAIN OVERLAY ============ -->
+  <div class="grain" aria-hidden="true"></div>
+
+  <!-- ============ CUSTOM CURSOR ============ -->
+  <div class="cursor" aria-hidden="true">
+    <span class="cursor__dot"></span>
+    <span class="cursor__ring"></span>
+    <span class="cursor__label"></span>
+  </div>
+
+  <!-- ============ PRELOADER ============ -->
+  <div class="preloader" id="preloader" aria-hidden="true">
+    <div class="preloader__inner">
+      <div class="preloader__mark">HRDW</div>
+      <div class="preloader__bar"><span></span></div>
+      <div class="preloader__count"><span id="loadCount">0</span><i>%</i></div>
+    </div>
+  </div>
+
+  <!-- ============ HEADER ============ -->
+  <header class="header" id="header">
+    <a href="#top" class="brand" data-cursor="HOME" aria-label="HRDW — home">
+      <img src="assets/hrdw-logo-white.png" alt="HRDW" class="brand__logo" />
+    </a>
+
+    <nav class="nav" aria-label="Primary">
+      <a href="#work" class="nav__link" data-cursor="VIEW"><span>01</span> Work</a>
+      <a href="#about" class="nav__link" data-cursor="READ"><span>02</span> About</a>
+      <a href="#reel" class="nav__link" data-cursor="PLAY"><span>03</span> Reel</a>
+      <a href="#contact" class="nav__link" data-cursor="SAY HI"><span>04</span> Contact</a>
+    </nav>
+
+    <button class="menu-toggle" id="menuToggle" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span>
+    </button>
+  </header>
+
+  <!-- ============ MOBILE MENU ============ -->
+  <div class="menu" id="menu" aria-hidden="true">
+    <ul class="menu__list">
+      <li><a href="#work" class="menu__link" data-index="01">Work</a></li>
+      <li><a href="#about" class="menu__link" data-index="02">About</a></li>
+      <li><a href="#reel" class="menu__link" data-index="03">Reel</a></li>
+      <li><a href="#contact" class="menu__link" data-index="04">Contact</a></li>
+    </ul>
+    <div class="menu__foot">
+      <a href="https://vimeo.com/harrisonwhelan" target="_blank" rel="noopener">Vimeo</a>
+      <a href="https://instagram.com/_barry.allan_" target="_blank" rel="noopener">Instagram</a>
+      <a href="https://www.linkedin.com/in/harrison-whelan-1a818bb4" target="_blank" rel="noopener">LinkedIn</a>
+    </div>
+  </div>
+
+  <main id="top">
+
+    <!-- ============ HERO ============ -->
+    <section class="hero" id="hero">
+      <div class="hero__bg" aria-hidden="true">
+        <div class="hero__blossom" style="background-image:url('assets/headshot-blossom.png')"></div>
+        <div class="hero__scrim"></div>
+      </div>
+
+      <div class="hero__inner">
+        <div class="hero__eyebrow reveal">
+          <span class="dot"></span> Available for select projects — 2026
+        </div>
+
+        <h1 class="hero__title">
+          <span class="line"><span class="word">HARRISON</span></span>
+          <span class="line"><span class="word">R.&nbsp;WHELAN</span></span>
+        </h1>
+
+        <div class="hero__meta">
+          <div class="hero__roles" aria-label="Roles">
+            <span class="hero__roles-static">A</span>
+            <span class="hero__roles-rotator" id="roleRotator">
+              <span class="is-active">Generative&nbsp;AI&nbsp;Specialist</span>
+              <span>Film&nbsp;Editor</span>
+              <span>Director</span>
+              <span>Producer</span>
+            </span>
+          </div>
+          <p class="hero__lede reveal">
+            Building moving image at the seam of craft and machine — commercials,
+            music videos, documentary and AI-generated worlds.
+          </p>
+        </div>
+      </div>
+
+      <a href="#work" class="hero__scroll" data-cursor="SCROLL" aria-label="Scroll to work">
+        <span>Selected Work</span>
+        <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M12 4v16m0 0l-6-6m6 6l6-6" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+    </section>
+
+    <!-- ============ MARQUEE ============ -->
+    <section class="marquee" aria-hidden="true">
+      <div class="marquee__track">
+        <span>Commercials</span><i>✦</i><span>Music Videos</span><i>✦</i><span>Documentary</span><i>✦</i><span>Generative AI</span><i>✦</i><span>Branded Film</span><i>✦</i><span>Narrative</span><i>✦</i><span>Sports Media</span><i>✦</i>
+        <span>Commercials</span><i>✦</i><span>Music Videos</span><i>✦</i><span>Documentary</span><i>✦</i><span>Generative AI</span><i>✦</i><span>Branded Film</span><i>✦</i><span>Narrative</span><i>✦</i><span>Sports Media</span><i>✦</i>
+      </div>
+    </section>
+
+    <!-- ============ SELECTED WORK ============ -->
+    <section class="work" id="work">
+      <div class="section-head">
+        <div class="section-head__index">(01)</div>
+        <h2 class="section-head__title">Selected<br>Work</h2>
+        <p class="section-head__note">
+          A cross-section of recent direction, editorial and AI-driven production.
+          Full reel on <a href="https://vimeo.com/harrisonwhelan" target="_blank" rel="noopener" data-cursor="OPEN">Vimeo&nbsp;↗</a>.
+        </p>
+      </div>
+
+      <div class="filters" id="filters" role="tablist" aria-label="Filter work by category">
+        <button class="filter is-active" data-filter="all" role="tab" aria-selected="true">All</button>
+        <button class="filter" data-filter="ai" role="tab" aria-selected="false">Generative AI</button>
+        <button class="filter" data-filter="commercial" role="tab" aria-selected="false">Commercials</button>
+        <button class="filter" data-filter="music" role="tab" aria-selected="false">Music Video</button>
+        <button class="filter" data-filter="doc" role="tab" aria-selected="false">Documentary</button>
+        <button class="filter" data-filter="narrative" role="tab" aria-selected="false">Narrative</button>
+        <button class="filter" data-filter="corporate" role="tab" aria-selected="false">Corporate</button>
+      </div>
+
+      <div class="grid" id="grid">
+        <!-- Real work, pulled from vimeo.com/harrisonwhelan. Clicking a tile opens the embedded player.
+             To add/replace: drop a thumbnail in assets/thumbs/ and copy a tile, setting data-vimeo to the numeric Vimeo ID. -->
+        <article class="tile tile--lg" data-cat="ai" data-vimeo="1202271190" data-title="Revive AI — Spring Campaign 2026" data-cursor="WATCH ▶">
+          <div class="tile__media"><img src="assets/thumbs/1202271190.jpg" alt="Revive AI — Spring Campaign 2026" loading="lazy" /><span class="tile__play" aria-hidden="true"></span></div>
+          <div class="tile__body">
+            <span class="tile__cat">Generative AI · Campaign</span>
+            <h3 class="tile__title">Revive AI</h3>
+            <span class="tile__year">2026</span>
+          </div>
+        </article>
+
+        <article class="tile" data-cat="commercial" data-vimeo="1103943424" data-title="The Future Starts at Home" data-cursor="WATCH ▶">
+          <div class="tile__media"><img src="assets/thumbs/1103943424.jpg" alt="The Future Starts at Home" loading="lazy" /><span class="tile__play" aria-hidden="true"></span></div>
+          <div class="tile__body">
+            <span class="tile__cat">Commercial · Spot</span>
+            <h3 class="tile__title">The Future Starts at Home</h3>
+            <span class="tile__year">2025</span>
+          </div>
+        </article>
+
+        <article class="tile" data-cat="ai" data-vimeo="1117189528" data-title="Agent XO: The AI Revolution Is Here" data-cursor="WATCH ▶">
+          <div class="tile__media"><img src="assets/thumbs/1117189528.jpg" alt="Agent XO: The AI Revolution Is Here" loading="lazy" /><span class="tile__play" aria-hidden="true"></span></div>
+          <div class="tile__body">
+            <span class="tile__cat">Generative AI · Brand Film</span>
+            <h3 class="tile__title">Agent XO</h3>
+            <span class="tile__year">2025</span>
+          </div>
+        </article>
+
+        <article class="tile" data-cat="music" data-vimeo="488715267" data-title="Listen — Music Video" data-cursor="WATCH ▶">
+          <div class="tile__media"><img src="assets/thumbs/488715267.jpg" alt="Listen — Music Video" loading="lazy" /><span class="tile__play" aria-hidden="true"></span></div>
+          <div class="tile__body">
+            <span class="tile__cat">Music Video</span>
+            <h3 class="tile__title">Listen</h3>
+            <span class="tile__year">2020</span>
+          </div>
+        </article>
+
+        <article class="tile tile--lg" data-cat="doc" data-vimeo="1024640789" data-title="Jerry Garrett: A History (AI Documentary)" data-cursor="WATCH ▶">
+          <div class="tile__media"><img src="assets/thumbs/1024640789.jpg" alt="Jerry Garrett: A History (AI Documentary)" loading="lazy" /><span class="tile__play" aria-hidden="true"></span></div>
+          <div class="tile__body">
+            <span class="tile__cat">AI Documentary</span>
+            <h3 class="tile__title">Jerry Garrett: A History</h3>
+            <span class="tile__year">2024</span>
+          </div>
+        </article>
+
+        <article class="tile" data-cat="ai" data-vimeo="1198510960" data-title="Material Beings" data-cursor="WATCH ▶">
+          <div class="tile__media"><img src="assets/thumbs/1198510960.jpg" alt="Material Beings" loading="lazy" /><span class="tile__play" aria-hidden="true"></span></div>
+          <div class="tile__body">
+            <span class="tile__cat">Generative AI · Short</span>
+            <h3 class="tile__title">Material Beings</h3>
+            <span class="tile__year">2026</span>
+          </div>
+        </article>
+
+        <article class="tile" data-cat="commercial" data-vimeo="1093146504" data-title="Wells Fargo — Mortgage Combo" data-cursor="WATCH ▶">
+          <div class="tile__media"><img src="assets/thumbs/1093146504.jpg" alt="Wells Fargo — Mortgage Combo" loading="lazy" /><span class="tile__play" aria-hidden="true"></span></div>
+          <div class="tile__body">
+            <span class="tile__cat">Commercial · Spot</span>
+            <h3 class="tile__title">Wells Fargo — Mortgage</h3>
+            <span class="tile__year">2025</span>
+          </div>
+        </article>
+
+        <article class="tile" data-cat="music" data-vimeo="647954770" data-title="&quot;Anxiety&quot; by Mace — Lyric Video" data-cursor="WATCH ▶">
+          <div class="tile__media"><img src="assets/thumbs/647954770.jpg" alt="Anxiety by Mace — Lyric Video" loading="lazy" /><span class="tile__play" aria-hidden="true"></span></div>
+          <div class="tile__body">
+            <span class="tile__cat">Music Video · Lyric</span>
+            <h3 class="tile__title">Anxiety — Mace</h3>
+            <span class="tile__year">2021</span>
+          </div>
+        </article>
+
+        <article class="tile" data-cat="corporate" data-vimeo="1008650623" data-title="Kali Audio: Product Overview — SM-5" data-cursor="WATCH ▶">
+          <div class="tile__media"><img src="assets/thumbs/1008650623.jpg" alt="Kali Audio: Product Overview — SM-5" loading="lazy" /><span class="tile__play" aria-hidden="true"></span></div>
+          <div class="tile__body">
+            <span class="tile__cat">Corporate · Product</span>
+            <h3 class="tile__title">Kali Audio — SM-5</h3>
+            <span class="tile__year">2024</span>
+          </div>
+        </article>
+
+        <article class="tile" data-cat="commercial" data-vimeo="869172106" data-title="AT&amp;T — The Half Family" data-cursor="WATCH ▶">
+          <div class="tile__media"><img src="assets/thumbs/869172106.jpg" alt="AT&amp;T — The Half Family" loading="lazy" /><span class="tile__play" aria-hidden="true"></span></div>
+          <div class="tile__body">
+            <span class="tile__cat">Commercial · Spot</span>
+            <h3 class="tile__title">AT&amp;T — The Half Family</h3>
+            <span class="tile__year">2023</span>
+          </div>
+        </article>
+
+        <article class="tile" data-cat="ai" data-vimeo="1024639457" data-title="IVORY — AI Movie Trailer" data-cursor="WATCH ▶">
+          <div class="tile__media"><img src="assets/thumbs/1024639457.jpg" alt="IVORY — AI Movie Trailer" loading="lazy" /><span class="tile__play" aria-hidden="true"></span></div>
+          <div class="tile__body">
+            <span class="tile__cat">Generative AI · Trailer</span>
+            <h3 class="tile__title">IVORY</h3>
+            <span class="tile__year">2024</span>
+          </div>
+        </article>
+
+        <article class="tile" data-cat="corporate" data-vimeo="808009333" data-title="UNIS × Pepsi Partnership Presentation" data-cursor="WATCH ▶">
+          <div class="tile__media"><img src="assets/thumbs/808009333.jpg" alt="UNIS x Pepsi Partnership Presentation" loading="lazy" /><span class="tile__play" aria-hidden="true"></span></div>
+          <div class="tile__body">
+            <span class="tile__cat">Corporate · Presentation</span>
+            <h3 class="tile__title">UNIS × Pepsi</h3>
+            <span class="tile__year">2023</span>
+          </div>
+        </article>
+
+        <article class="tile" data-cat="narrative" data-vimeo="1025229373" data-title="The Upgrade" data-cursor="WATCH ▶">
+          <div class="tile__media"><img src="assets/thumbs/1025229373.jpg" alt="The Upgrade" loading="lazy" /><span class="tile__play" aria-hidden="true"></span></div>
+          <div class="tile__body">
+            <span class="tile__cat">Narrative · Short</span>
+            <h3 class="tile__title">The Upgrade</h3>
+            <span class="tile__year">2024</span>
+          </div>
+        </article>
+
+        <article class="tile" data-cat="ai" data-vimeo="1024636591" data-title="Pallet Pals" data-cursor="WATCH ▶">
+          <div class="tile__media"><img src="assets/thumbs/1024636591.jpg" alt="Pallet Pals" loading="lazy" /><span class="tile__play" aria-hidden="true"></span></div>
+          <div class="tile__body">
+            <span class="tile__cat">Generative AI · Spot</span>
+            <h3 class="tile__title">Pallet Pals</h3>
+            <span class="tile__year">2024</span>
+          </div>
+        </article>
+
+        <article class="tile tile--lg" data-cat="narrative" data-vimeo="1198499077" data-title="Two Birds — Short Film" data-cursor="WATCH ▶">
+          <div class="tile__media"><img src="assets/thumbs/1198499077.jpg" alt="Two Birds — Short Film" loading="lazy" /><span class="tile__play" aria-hidden="true"></span></div>
+          <div class="tile__body">
+            <span class="tile__cat">Short Film</span>
+            <h3 class="tile__title">Two Birds</h3>
+            <span class="tile__year">2026</span>
+          </div>
+        </article>
+
+        <article class="tile" data-cat="commercial" data-vimeo="1198498429" data-title="CerviGuard (US)" data-cursor="WATCH ▶">
+          <div class="tile__media"><img src="assets/thumbs/1198498429.jpg" alt="CerviGuard (US)" loading="lazy" /><span class="tile__play" aria-hidden="true"></span></div>
+          <div class="tile__body">
+            <span class="tile__cat">Commercial · Product</span>
+            <h3 class="tile__title">CerviGuard</h3>
+            <span class="tile__year">2026</span>
+          </div>
+        </article>
+
+        <article class="tile" data-cat="ai" data-vimeo="1061254061" data-title="Stride: All Terrain Series" data-cursor="WATCH ▶">
+          <div class="tile__media"><img src="assets/thumbs/1061254061.jpg" alt="Stride: All Terrain Series" loading="lazy" /><span class="tile__play" aria-hidden="true"></span></div>
+          <div class="tile__body">
+            <span class="tile__cat">Generative AI · Spot</span>
+            <h3 class="tile__title">Stride — All Terrain</h3>
+            <span class="tile__year">2025</span>
+          </div>
+        </article>
+
+        <article class="tile" data-cat="narrative" data-vimeo="1103953527" data-title="Eject" data-cursor="WATCH ▶">
+          <div class="tile__media"><img src="assets/thumbs/1103953527.jpg" alt="Eject" loading="lazy" /><span class="tile__play" aria-hidden="true"></span></div>
+          <div class="tile__body">
+            <span class="tile__cat">Narrative · Short</span>
+            <h3 class="tile__title">Eject</h3>
+            <span class="tile__year">2025</span>
+          </div>
+        </article>
+
+        <article class="tile" data-cat="music" data-vimeo="544714802" data-title="Lost &amp; Found EP — &quot;Wild One&quot;" data-cursor="WATCH ▶">
+          <div class="tile__media"><img src="assets/thumbs/544714802.jpg" alt="Lost & Found EP — Wild One" loading="lazy" /><span class="tile__play" aria-hidden="true"></span></div>
+          <div class="tile__body">
+            <span class="tile__cat">Music Video</span>
+            <h3 class="tile__title">Lost &amp; Found — Wild One</h3>
+            <span class="tile__year">2021</span>
+          </div>
+        </article>
+
+        <article class="tile" data-cat="doc" data-vimeo="421220725" data-title="Artist Profile: LAZYFLEX" data-cursor="WATCH ▶">
+          <div class="tile__media"><img src="assets/thumbs/421220725.jpg" alt="Artist Profile: LAZYFLEX" loading="lazy" /><span class="tile__play" aria-hidden="true"></span></div>
+          <div class="tile__body">
+            <span class="tile__cat">Documentary · Profile</span>
+            <h3 class="tile__title">LAZYFLEX</h3>
+            <span class="tile__year">2018</span>
+          </div>
+        </article>
+
+        <article class="tile" data-cat="narrative" data-vimeo="566173409" data-title="Don't Break the Box — Narrative Short" data-cursor="WATCH ▶">
+          <div class="tile__media"><img src="assets/thumbs/566173409.jpg" alt="Don't Break the Box" loading="lazy" /><span class="tile__play" aria-hidden="true"></span></div>
+          <div class="tile__body">
+            <span class="tile__cat">Narrative Short</span>
+            <h3 class="tile__title">Don't Break the Box</h3>
+            <span class="tile__year">2016</span>
+          </div>
+        </article>
+
+        <article class="tile" data-cat="narrative" data-vimeo="566190804" data-title="The Lemonade Stand — Short Film" data-cursor="WATCH ▶">
+          <div class="tile__media"><img src="assets/thumbs/566190804.jpg" alt="The Lemonade Stand — Short Film" loading="lazy" /><span class="tile__play" aria-hidden="true"></span></div>
+          <div class="tile__body">
+            <span class="tile__cat">Narrative Short</span>
+            <h3 class="tile__title">The Lemonade Stand</h3>
+            <span class="tile__year">2012</span>
+          </div>
+        </article>
+
+        <article class="tile" data-cat="narrative" data-vimeo="544715053" data-title="Lost &amp; Found EP — Narrative Trailer" data-cursor="WATCH ▶">
+          <div class="tile__media"><img src="assets/thumbs/544715053.jpg" alt="Lost & Found EP — Narrative Trailer" loading="lazy" /><span class="tile__play" aria-hidden="true"></span></div>
+          <div class="tile__body">
+            <span class="tile__cat">Narrative · Trailer</span>
+            <h3 class="tile__title">Lost &amp; Found — Trailer</h3>
+            <span class="tile__year">2021</span>
+          </div>
+        </article>
+
+        <article class="tile" data-cat="narrative" data-vimeo="771708535" data-title="Dance Dish — S5 E16" data-cursor="WATCH ▶">
+          <div class="tile__media"><img src="assets/thumbs/771708535.jpg" alt="Dance Dish — S5 E16" loading="lazy" /><span class="tile__play" aria-hidden="true"></span></div>
+          <div class="tile__body">
+            <span class="tile__cat">Narrative · Series</span>
+            <h3 class="tile__title">Dance Dish — S5</h3>
+            <span class="tile__year">2022</span>
+          </div>
+        </article>
+
+        <article class="tile" data-cat="corporate" data-vimeo="868999342" data-title="OPERA8 App Promo" data-cursor="WATCH ▶">
+          <div class="tile__media"><img src="assets/thumbs/868999342.jpg" alt="OPERA8 App Promo" loading="lazy" /><span class="tile__play" aria-hidden="true"></span></div>
+          <div class="tile__body">
+            <span class="tile__cat">Corporate · Product</span>
+            <h3 class="tile__title">OPERA8 App</h3>
+            <span class="tile__year">2023</span>
+          </div>
+        </article>
+
+        <article class="tile" data-cat="corporate" data-vimeo="933403465" data-title="UNIS × Beverage Industry" data-cursor="WATCH ▶">
+          <div class="tile__media"><img src="assets/thumbs/933403465.jpg" alt="UNIS x Beverage Industry" loading="lazy" /><span class="tile__play" aria-hidden="true"></span></div>
+          <div class="tile__body">
+            <span class="tile__cat">Corporate · Brand</span>
+            <h3 class="tile__title">UNIS × Beverage</h3>
+            <span class="tile__year">2024</span>
+          </div>
+        </article>
+
+        <article class="tile" data-cat="corporate" data-vimeo="935706050" data-title="Item Tradeshow 2024 Promo" data-cursor="WATCH ▶">
+          <div class="tile__media"><img src="assets/thumbs/935706050.jpg" alt="Item Tradeshow 2024 Promo" loading="lazy" /><span class="tile__play" aria-hidden="true"></span></div>
+          <div class="tile__body">
+            <span class="tile__cat">Corporate · Event</span>
+            <h3 class="tile__title">Item Tradeshow 2024</h3>
+            <span class="tile__year">2024</span>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ============ ABOUT ============ -->
+    <section class="about" id="about">
+      <div class="section-head">
+        <div class="section-head__index">(02)</div>
+        <h2 class="section-head__title">About</h2>
+      </div>
+
+      <div class="about__grid">
+        <div class="about__portrait reveal">
+          <img src="assets/about-me.webp" alt="Harrison R. Whelan — animated portrait" loading="lazy" decoding="async" />
+          <span class="about__tag">HRW · LA</span>
+        </div>
+
+        <div class="about__text">
+          <p class="about__lead reveal">
+            I'm Harrison — a Los Angeles–based senior editor, producer and director who
+            treats generative AI as another lens on the camera rig. The work moves between
+            commercial polish and experimental image-making.
+          </p>
+          <p class="reveal">
+            Over the past decade the toolkit has grown from timelines and grade panels to
+            diffusion models and latent video. I direct, cut and produce across commercials,
+            corporate marketing, music videos, documentary, narrative comedy, product and
+            event promos, real estate and sports media — and increasingly fuse traditional
+            footage with AI-generated frames into something that couldn't exist any other way.
+          </p>
+
+          <ul class="capabilities reveal">
+            <li><span>01</span> Direction &amp; Creative Strategy</li>
+            <li><span>02</span> Editorial &amp; Post Workflow</li>
+            <li><span>03</span> Generative AI Pipelines</li>
+            <li><span>04</span> Producing &amp; Delivery</li>
+          </ul>
+
+          <div class="stats reveal">
+            <div class="stat"><b data-count="10">0</b><span>Years in post</span></div>
+            <div class="stat"><b data-count="8">0</b><span>Disciplines</span></div>
+            <div class="stat"><b data-count="60" data-suffix="+">0</b><span>Films on Vimeo</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ REEL CTA ============ -->
+    <section class="reel" id="reel">
+      <a class="reel__cta" href="https://vimeo.com/1027817194" target="_blank" rel="noopener" data-vimeo="1027817194" data-title="HRDW — Narrative Demo Reel" data-cursor="PLAY ▶">
+        <div class="reel__index">(03)</div>
+        <h2 class="reel__title">
+          <span class="line"><span class="word">SHOW</span></span>
+          <span class="line"><span class="word">REEL</span></span>
+        </h2>
+        <div class="reel__sub">
+          <span>Play the narrative demo reel</span>
+          <svg viewBox="0 0 24 24" width="28" height="28" aria-hidden="true"><path d="M5 12h14m0 0l-6-6m6 6l-6 6" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+      </a>
+    </section>
+
+    <!-- ============ CONTACT / FOOTER ============ -->
+    <footer class="contact" id="contact">
+      <div class="section-head">
+        <div class="section-head__index">(04)</div>
+        <h2 class="section-head__title">Let's<br>make<br>something</h2>
+      </div>
+
+      <a class="contact__email" href="mailto:hrwhelanproductions@gmail.com" data-cursor="EMAIL">hrwhelanproductions@gmail.com</a>
+
+      <div class="contact__cols">
+        <div class="contact__col">
+          <h4>Social</h4>
+          <a href="https://vimeo.com/harrisonwhelan" target="_blank" rel="noopener">Vimeo ↗</a>
+          <a href="https://instagram.com/_barry.allan_" target="_blank" rel="noopener">Instagram ↗</a>
+          <a href="https://www.linkedin.com/in/harrison-whelan-1a818bb4" target="_blank" rel="noopener">LinkedIn ↗</a>
+          <a href="https://www.facebook.com/barryallanfilms/" target="_blank" rel="noopener">Facebook ↗</a>
+        </div>
+        <div class="contact__col">
+          <h4>Index</h4>
+          <a href="#work">Work</a>
+          <a href="#about">About</a>
+          <a href="#reel">Reel</a>
+          <a href="#top">Back to top ↑</a>
+        </div>
+        <div class="contact__col">
+          <h4>Studio</h4>
+          <p>HRDW / Harrison R. Whelan<br>Director · Editor · Producer<br>Generative AI Specialist</p>
+        </div>
+      </div>
+
+      <div class="contact__base">
+        <img src="assets/hrdw-logo-white.png" alt="HRDW" class="contact__logo" />
+        <span>© <span id="year"></span> Harrison R. Whelan. All rights reserved.</span>
+        <span>Made with motion.</span>
+      </div>
+    </footer>
+
+  </main>
+
+  <!-- ============ VIDEO LIGHTBOX ============ -->
+  <div class="lightbox" id="lightbox" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Video player">
+    <button class="lightbox__close" id="lightboxClose" data-cursor="CLOSE" aria-label="Close video">
+      <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+    </button>
+    <figure class="lightbox__stage">
+      <div class="lightbox__frame" id="lightboxFrame"></div>
+      <figcaption class="lightbox__cap" id="lightboxCap"></figcaption>
+    </figure>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

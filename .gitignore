@@ -1,0 +1,8 @@
+# macOS
+.DS_Store
+._*
+
+# Editor / local
+.claude/
+node_modules/
+.netlify/
