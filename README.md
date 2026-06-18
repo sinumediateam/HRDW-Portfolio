@@ -88,6 +88,26 @@ netlify deploy --prod           # publish to production
 > Note: your existing "Sinu" site is a separate Netlify site — this deploys as a **new
 > site** under the same account, so it won't touch Sinu.
 
+## Manage on GitHub (via GitHub Desktop)
+
+This folder is already a Git repo (`main` branch, initial commit). To put it on GitHub:
+
+1. Install **GitHub Desktop** from [desktop.github.com](https://desktop.github.com) and sign in
+   (create a free GitHub account if you don't have one).
+2. **File → Add Local Repository…** → choose this folder (`HRDW-Portfolio`).
+3. Click **Publish repository** (top bar). Name it e.g. `hrdw-portfolio`,
+   **uncheck "Keep this code private"** for a public repo, then **Publish**.
+
+To update later: edit files → GitHub Desktop lists the changes → write a short summary →
+**Commit to main** → **Push origin**.
+
+> The project lives on an external SD card, so the drive must be plugged in to commit/push.
+
+### Auto-deploy from GitHub → Netlify (optional)
+Once it's on GitHub, connect it for hands-off deploys: Netlify → **Add new site → Import an
+existing project** → pick the repo → build command *(blank)*, publish directory `.`. Every
+push to `main` then redeploys automatically. (`netlify.toml` is already in the repo.)
+
 ---
 
 Built to drop onto any static host (Netlify, Vercel, GitHub Pages, Cloudflare Pages).
