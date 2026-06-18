@@ -160,7 +160,7 @@ img { display: block; max-width: 100%; }
 /* ============ HERO ============ */
 .hero { position: relative; min-height: 100vh; min-height: 100dvh; display: flex; flex-direction: column;
   justify-content: flex-end; padding: var(--pad); padding-bottom: clamp(2rem, 6vh, 5rem); overflow: hidden; }
-.hero__bg { position: absolute; inset: 0; z-index: -1; }
+.hero__bg { position: absolute; inset: 0; z-index: 0; }
 .hero__blossom {
   position: absolute; inset: 0; background-size: cover; background-position: center 30%;
   filter: grayscale(0.3) contrast(1.05) brightness(0.7);
@@ -170,7 +170,8 @@ img { display: block; max-width: 100%; }
   position: absolute; inset: 0;
   background: linear-gradient(180deg, rgba(10,10,10,.55) 0%, rgba(10,10,10,.2) 35%, rgba(10,10,10,.85) 100%);
 }
-.hero__inner { position: relative; max-width: var(--maxw); width: 100%; margin: 0 auto; }
+.hero__inner { position: relative; z-index: 1; max-width: var(--maxw); width: 100%; margin: 0 auto; }
+.hero__scroll { z-index: 1; }
 .hero__eyebrow { display: inline-flex; align-items: center; gap: .55rem; font-size: .8rem; letter-spacing: .04em;
   color: var(--fg); margin-bottom: clamp(1rem,3vh,2rem); }
 .hero__eyebrow .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--accent);
