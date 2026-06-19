@@ -293,6 +293,14 @@ img { display: block; max-width: 100%; }
   font-size: clamp(1.5rem, 3vw, 2.6rem); margin: .35rem 0 .15rem; }
 .tile__year { font-size: .78rem; color: var(--fg-dim); font-variant-numeric: tabular-nums; }
 
+/* Mobile: shrink the overlay text so long titles don't fill the thumbnail */
+@media (max-width: 640px){
+  .tile__body { padding: .75rem; }
+  .tile__cat { font-size: .56rem; letter-spacing: .06em; }
+  .tile__title { font-size: 1.02rem; line-height: 1; margin: .2rem 0 .1rem; }
+  .tile__year { font-size: .64rem; }
+}
+
 /* hover: simply dull the thumbnail (opacity), no black flood/inversion */
 @media (hover: none){ .tile:hover .tile__media img { opacity: 1; } }
 
